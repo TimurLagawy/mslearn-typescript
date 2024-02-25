@@ -11,16 +11,28 @@ let fullName: string;
 let age: number;
 let ukCitizen: boolean;
 
-firstName = 'Rebecca';
-lastName = 'Smith';
+firstName = "Rebecca";
+lastName = "Smith";
 age = 42;
 ukCitizen = false;
 fullName = firstName + " " + lastName;
 
 if (ukCitizen) {
-    console.log("My name is " + fullName + ", I'm " + age + ", and I'm a citizen of the United Kingdom.");
+  console.log(
+    "My name is " +
+      fullName +
+      ", I'm " +
+      age +
+      ", and I'm a citizen of the United Kingdom."
+  );
 } else {
-    console.log("My name is " + fullName + ", I'm " + age + ", and I'm not a citizen of the United Kingdom.");
+  console.log(
+    "My name is " +
+      fullName +
+      ", I'm " +
+      age +
+      ", and I'm not a citizen of the United Kingdom."
+  );
 }
 
 /* EXERCISE 2
@@ -44,32 +56,32 @@ console.log(a);
    you can pass in the season by referencing an item in the enum, for example 
    Season.Fall, instead of the literal string "Fall". */
 
-   enum Season {
-    Winter,
-    Spring,
-    Summer,
-    Fall
-};
-
-function whichMonths(season: Season) {
-    let monthsInSeason: string;
-    switch (season) {
-        case Season.Fall:
-            monthsInSeason = "September to November";
-            break;
-        case Season.Winter:
-            monthsInSeason = "December to February";
-            break;
-        case Season.Spring:
-            monthsInSeason = "March to May";
-            break;
-        case Season.Summer:
-            monthsInSeason = "June to August";
-    }
-    return monthsInSeason;
+enum Season {
+  Winter,
+  Spring,
+  Summer,
+  Fall,
 }
 
-console.log(whichMonths(Season.Spring));
+function whichMonths(season: Season) {
+  let monthsInSeason: string;
+  switch (season) {
+    case Season.Fall:
+      monthsInSeason = "September to November";
+      break;
+    case Season.Winter:
+      monthsInSeason = "December to February";
+      break;
+    case Season.Spring:
+      monthsInSeason = "March to May";
+      break;
+    case Season.Summer:
+      monthsInSeason = "June to August";
+  }
+  return monthsInSeason;
+}
+
+console.log(whichMonths(Season.Fall));
 
 /* EXERCISE 4
    TODO: Declare the array as the type to match the type of the items in the array. */
@@ -78,9 +90,8 @@ let randomNumbers: number[] = [];
 let nextNumber: number;
 
 for (let i = 0; i < 10; i++) {
-    nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
-    randomNumbers.push(nextNumber);
+  nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
+  randomNumbers.push(nextNumber);
 }
 
 console.log(randomNumbers);
-   
